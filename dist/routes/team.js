@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const TeamController_1 = require("../controllers/TeamController");
+const routes = (0, express_1.Router)();
+routes.post('/', TeamController_1.default.create);
+routes.get('/', TeamController_1.default.list);
+routes.get('/:name', TeamController_1.default.listByName);
+routes.delete('/', TeamController_1.default.delete);
+routes.put('/', TeamController_1.default.update);
+exports.default = routes;
