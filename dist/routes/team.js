@@ -8,4 +8,5 @@ routes.get('/', TeamController_1.default.list);
 routes.get('/:name', TeamController_1.default.listByName);
 routes.delete('/', TeamController_1.default.delete);
 routes.put('/', TeamController_1.default.update);
+routes.use((_, res) => res.json({ error: "Requisição desconhecida com o time" }));
 exports.default = routes;
